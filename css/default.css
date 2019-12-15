@@ -1,0 +1,89 @@
+/* head */
+a{color:#007aa9;}
+a:hover{color:#007aa9;}
+.top_line, .copyright{background:#333333;}
+
+.wpmfco_form_wrap .wpcf7-form .wpcf7-form-control.wpcf7-submit, .category_form .wpcf7-form .wpcf7-form-control.wpcf7-submit, .cta_block .cta_btn {background: #007aa9;}
+.wpmfco_form_wrap .wpcf7-form .wpcf7-form-control.wpcf7-submit:hover, .category_form .wpcf7-form .wpcf7-form-control.wpcf7-submit:hover, .cta_block .cta_btn:hover {background: #3facd6;}
+
+/* mobyle menu */
+.mmcall{background: #3facd6;}
+/* multitag a-я */
+.letter_tag_widget a,.child_cats_list_wrap .child_cats_list li a{background: #007aa9;}
+.letter_tag_widget a:hover,.letter_tag_widget a:active, .letter_tag_widget .active, .child_cats_list_wrap .child_cats_list li a:hover{background: #3facd6;}
+.child_cats_list_wrap .child_cats_list li a{color:#ffffff;}
+/* rubrici */
+.widget_sidebar_cats_ul li a:hover,.widget_sidebar_cats_ul  .current-cat a{background:#3facd6;color:#ffffff;}
+.widget_sidebar_cats_ul  .current-cat .children li a{color:#007aa9;}
+.widget_sidebar_cats_ul  .current-cat .children li a:hover{color:#ffffff;}
+.current-cat-parent .children .current-cat a{background:#3facd6;}
+.current-cat-parent .children .current-cat .children li a:hover{background:#3facd6;}
+
+#fixed_header{background-color: #007aa9;}
+header .nav .open > a, 
+header .nav .open > a:hover,
+header .nav .open > a:focus,
+header .dropdown-menu > li > a:hover,
+header .dropdown-menu > li > a:focus,
+header .dropdown-menu > li >span:hover,
+header .dropdown-menu > li >span:focus,
+header .dropdown-menu > li.current-menu-item >span,
+header ul>li.current-post-ancestor >a,
+header ul>li.current-post-ancestor:hover >a,
+header ul>li.current-category-ancestor >a,
+header ul>li.current-category-ancestor:hover >a,
+header ul>li.current-menu-ancestor >a,
+header ul>li.current-menu-ancestor:hover >a,
+header ul>li.current-menu-ancestor >span,
+header ul>li.current-menu-ancestor:hover >span,
+ul.mm-list>li.current-post-ancestor >a:not([class="mm-subopen"]),
+ul.mm-list>li.current-post-ancestor:hover >a:not([class="mm-subopen"]),
+ul.mm-list>li.current-category-ancestor >a:not([class="mm-subopen"]),
+ul.mm-list>li.current-category-ancestor:hover >a:not([class="mm-subopen"]),
+ul.mm-list>li.current-menu-ancestor >a:not([class="mm-subopen"]),
+ul.mm-list>li.current-menu-ancestor:hover >a:not([class="mm-subopen"]),
+ul.mm-list>li.current-menu-item>a:not([class="mm-subopen"]),
+ul.mm-list>li.current-menu-item:hover>a:not([class="mm-subopen"])
+{background-color:#3facd6;color:#ffffff;}
+header .search{background:#007aa9;}
+.search_form_button:hover{background-color:#3facd6;}
+.widgettitle{border-color:#999999;}
+.content .search input{border-color:#007aa9;}
+.content .search button{background-color:#007aa9;}
+.content .search button:hover{background-color:#3facd6;}
+header .nav > li > a:hover, header .nav > li > a:focus,header .nav > .active > span{background: #3facd6;}
+
+/* content */
+.sm_post_box .post_title a,.lg_post_box .post_title a, .md_post_box .post_title a{color:#007aa9;}
+.sm_post_box .post_title a:hover,.lg_post_box .post_title a:hover, .md_post_box .post_title a:hover{color:#007aa9;}
+.widget_wysija .wysija-submit{background: #007aa9;}
+.widget_wysija .wysija-submit:hover{background-color:#3facd6;}
+
+/* subscribe */
+.subscribe_box{border-color:#007aa9;}
+
+.tab_widget .nav-tabs{background-color:#007aa9;}
+.tab_widget .nav > li > a:hover, .tab_widget .nav > li > a:focus,.tab_widget .nav-tabs > li.active > a, .tab_widget .nav-tabs > li.active > a:hover, .tab_widget .nav-tabs > li.active > a:focus{background:#3facd6;}
+.comment-form input[type="submit"]{background:#007aa9;}
+.comment-form input[type="submit"]:hover{background-color:#3facd6;}
+.tag_list li a:hover,.tag_list .current-tag a{background:#3facd6;color:#ffffff;}
+aside .subscribe_widget .widgettitle{background:#007aa9;}
+
+/* pagination */
+.wp-pagenavi span.current{color:#007aa9;}
+
+/* more link */
+.more-link:hover,.more-link:hover:before{background:#3facd6;}
+.more-link:before{background:#007aa9;}
+
+.show_other_show, .show_other_close{background:#007aa9;}
+.show_other_show:hover, .show_other_close:hover{background:#3facd6;}
+
+/* accordion in content and tabs */
+.main_text .panel-title > a,.main_text div.panel-title a:before,.main_text .nav > li > a, .main_text .nav > li >span{color:#007aa9;}
+
+/* 404 */
+.error_number{color:#007aa9;}
+.page404 .search input{border-color:#007aa9;}
+.page404 .search button{background-color:#007aa9;}
+.page404 .search button:hover{background-color:#3facd6;}
