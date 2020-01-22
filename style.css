@@ -206,9 +206,14 @@ b, strong {
     background-size: cover;
     background-position: center center;
     position: relative;
-    background: url(img/cruise.jpg);
+    background: url(img/cruise-min.jpg);
     height: 875px;
     background-size: cover;
+}
+
+.email-top {
+    text-decoration: none;
+    color: #0f0f0f!important;
 }
 
 .top_bar_page {
@@ -329,7 +334,7 @@ b, strong {
 }
 
 .tel {
-    font-family: Montserrat-SemiBold;
+    /*font-family: Montserrat-SemiBold;*/
     font-size: 18px;
 }
 
