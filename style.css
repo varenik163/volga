@@ -19,6 +19,34 @@ Author: Rysin Valeriy
     font-display: auto;
 }
 
+.thumbnail-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tour-order-button {
+    background: #05346d;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 395px;
+    height: 85px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tour-order-button-row {
+    margin-top: 150px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .col-xs-5ths,
 .col-sm-5ths,
 .col-md-5ths,
@@ -32,6 +60,18 @@ Author: Rysin Valeriy
 .col-xs-5ths {
     width: 20%;
     float: left;
+}
+
+td, th {
+    padding: 5px;
+}
+#today {
+    background: #4cb4b4;
+    color: #fff;
+}
+
+.motorships {
+    margin-top: 50px;
 }
 
 @media (min-width: 768px) {
@@ -65,12 +105,12 @@ body{
 }
 a{
     transition: .2s;
-    color: #41a231;
+    color: #7a72a2;
     text-decoration: underline;
     cursor: pointer;
 }
 a:hover{
-    color:#005bb7;
+    color:#4e91b9;
     text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -80,6 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h2 {
     font-size: 30px;
+    margin: 55px 0;
 }
 
 .home-h2 {
@@ -126,7 +167,7 @@ b, strong {
     float: left;
     width: 100%;
     height: 30px;
-    background: #005bb7;
+    background: #17b7b5;
     color:#fff;
 }
 .top_line .menu{
@@ -154,6 +195,12 @@ b, strong {
     height: 100%;
 }
 
+.glass {
+    width: 100%;
+    height: 100%;
+    background: #ffffff85;
+}
+
 .head_top {
     clear: both;
     background-size: cover;
@@ -178,6 +225,8 @@ b, strong {
     align-items: center;
     height: 120px;
 }
+
+.logo_img img { width: 100px }
 
 #searchform {
     display: block;
@@ -209,11 +258,11 @@ b, strong {
 
 .search_input:focus,
 .search_input:active {
-    border: #00a31b 1px solid;
+    border: #089aa3 1px solid;
 }
 
 .search_btn {
-    background: #00a31b;
+    background: #2696a3;
     border: none;
     padding: 5px 10px;
     border-radius: 10px;
@@ -289,7 +338,7 @@ b, strong {
 }
 
 .tel-code {
-    color: #8e9bba;
+    color: #4cb4b4;
 }
 
 .tel-number {
@@ -297,15 +346,16 @@ b, strong {
 }
 
 .recall {
-    background: #495cb4;
+    background: #4cb4b4;
     color: #fff;
     padding: 5px 10px;
-    border-radius: 30px;
+    border-radius: 5px;
     display: inline-block;
     width: 165px;
     text-align: center;
     font-size: 12px;
     text-decoration: none;
+    border: 1px solid #cccccc8a;
 
 }
 
@@ -318,7 +368,7 @@ b, strong {
     margin: 15px 0 0 35px;
 }
 #hd_menu_main {
-    background: #005bb7;
+    background: #219fb7;
     position: relative;
     width: 100%;
     height: 50px;
@@ -328,7 +378,7 @@ b, strong {
     margin: 0 !important;
 }
 .nav > li > a, .nav > li >span {
-    color: #4e65b9;
+    color: #000;
     font-size: 14px;
     line-height: 24px;
     font-family: "Montserrat-SemiBold";
@@ -344,9 +394,18 @@ b, strong {
     text-decoration: underline;
 }
 
+.img-cabin-wrapper {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.cabin {
+    clear: both;
+}
+
 .about-items-item {
     text-align: center;
-    color: #4e65b9;
+    color: #2b9ab9;
     font-size: 14px;
 }
 
@@ -361,10 +420,10 @@ b, strong {
 }
 
 .recall-order {
-    border: 2px solid #41a231;
-    color: #41a231;
+    background: #409fa2;
+    color: #fff;
     min-height: 60px;
-    border-radius: 33px;
+    border-radius: 5px;
     padding: 18px 33px;
     cursor: pointer;
     font-weight: bold;
@@ -375,7 +434,7 @@ b, strong {
 }
 
 .site-name {
-    color: #4e65b9;
+    color: #053270b5;
     font-size: 42px;
     font-weight: 600;
     margin-top: 88px;
@@ -384,7 +443,7 @@ b, strong {
 }
 
 .site-name-start {
-    color: #41a231;
+    color: #248da2;
 }
 
 .site-desc {
@@ -401,15 +460,21 @@ b, strong {
     display: flex;
     text-decoration: none;
     font-family: Montserrat-SemiBold;
-    color: #4e65b9;
+    color: #29a5b9;
     cursor: pointer;
 }
 .head-comments-link a .icon-comments{
     margin-right: 15px;
 }
 
+.opacity-hover:hover {
+    opacity: .7;
+}
+
 .recall-order:hover {
     text-decoration: none;
+    color: #fff;
+    opacity: .7;
 }
 
 #reklama_header{
@@ -658,20 +723,20 @@ b, strong {
 
 .complex_support strong {
     font-size: 16px;
-    color: #4e65b9;
+    color: #16b9b7;
 }
 
 .img-circle-wrapper {
     overflow: hidden;
     border-radius: 100%;
-    width: 195px;
-    height: 195px;
+    width: 55px;
+    height: 55px;
     margin: 0 auto;
     position: relative;
 }
 
 .img-circle-wrapper img {
-    width: 195px;
+    width: 55px;
 }
 
 .arrow-in-circle {
@@ -869,8 +934,7 @@ b, strong {
 }
 
 .recall-order-blue{
-    border-color: #4e65b9;
-    color: #4e65b9!important;
+    background: #05346d;
 }
 
 .main-info {
@@ -918,7 +982,7 @@ b, strong {
 }
 
 .main-info strong {
-    color: #4e65b9;
+    color: #2cabb9;
     margin-bottom: 15px;
     display: block;
 }
@@ -932,7 +996,7 @@ b, strong {
 }
 
 .main-info .mail, .main-info .telegram, .mail a, .telegram a {
-    color: #4e65b9;
+    color: #1eacb9;
     font-size: 14px;
 }
 
@@ -982,7 +1046,7 @@ b, strong {
 }
 
 .text-blue {
-    color: #4e65b9;
+    color: #51b8b9;
 }
 
 .cat_post{
@@ -1180,7 +1244,7 @@ footer .comment-link-text {
     margin: 0 0 25px;
     border-bottom: 2px solid #999;
     padding-bottom: 3px;
-    font-size: 28px;
+    font-size: 40px;
 }
 
 .post_title h1{
@@ -1773,8 +1837,9 @@ ul li.post_docs_doc:before{
 }
 
 .btn-primary {
-    background: #495cb4;
-    border-color: #495cb4;
+    background-color: #05346d;
+    border-color: #0052b8;
+    border-radius: 3px!important;
 }
 
 .thanks {
@@ -2232,6 +2297,7 @@ strong.cat-name { min-height: 50px; display: flex; align-items: center; justify-
     }
 }
 @media (max-width: 1170px) {
+    .tour-order-button-row { margin-top: 0; }
     .top_bar_inner .search-block { margin-top: 10px; }
     .what_includes-items { text-align: center }
     .what_includes_hr-text { display: block; }

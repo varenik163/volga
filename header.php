@@ -20,8 +20,10 @@
 <body <?php body_class(); ?>>
     <div class="">
         <header>
+
             <?php if(is_front_page()): ?>
                 <div class="head_top" id="head_top_block">
+                    <div class="glass">
                     <div class="top">
                         <div class="top_bar">
                             <div class="container">
@@ -36,45 +38,18 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="site-name">
-                                        <span class="site-name-start">
-                                            <?php echo substr(get_bloginfo('name'), 0, 4);?>
-                                        </span>
-                                        <span class="site-name-end">
-                                            <?php echo substr(
-                                                    get_bloginfo('name'),
-                                                    4,
-                                                    strlen(get_bloginfo('name'))
-                                            );?>
-                                        </span>
+                                        <?=get_bloginfo('name')?>
                                     </div>
                                     <div class="site-desc"><?php bloginfo('description');?></div>
-                                    <div class="head-comments-link">
-                                        <a href="<?php echo site_url().'/o-nas/#about-reviews-anchor'; ?>">
-                                            <span class="icon icon-comments"></span>
-                                            <span>Отзывы о компании</span>
-                                        </a>
-                                    </div>
-                                    <div class="row about-items">
-                                        <?php
-                                        $fields = get_field('header_about_items');
-                                        foreach ($fields as $field): ?>
-                                            <div class="col-lg-4 col-md-4">
-                                                <div class="about-items-item">
-                                                    <img src="<?php echo $field['header_about_items_item']['header_about_items_item_icon']?>" />
-                                                    <div><?php echo $field['header_about_items_item']['header_about_items_item_text']?></div>
-                                                </div>
-                                            </div>
-                                        <?php endforeach;
-                                        ?>
-                                    </div>
-                                    <div class="row recall-order-wrapper">
-                                        <div class="col-lg-12">
-                                            <a class="recall-order" data-toggle="modal" data-target="#modalOrder">Заказать обратный звонок</a>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
+                            <div class="row tour-order-button-row">
+                                <div class="col-lg-12 flex">
+                                    <a class="tour-order-button flex opacity-hover" data-toggle="modal" data-target="#modalOrder">Заказать тур</a>
+                                </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             <?php else: ?>

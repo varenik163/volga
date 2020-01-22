@@ -416,7 +416,7 @@ function createServiceTaxonomy() {
         'show_admin_column'     => false, // Позволить или нет авто-создание колонки таксономии в таблице ассоциированного типа записи. (с версии 3.5)
         '_builtin'              => false,
         'show_in_quick_edit'    => null, // по умолчанию значение show_ui
-        'taxonomies'            => array( 'service' ),
+        'taxonomies'            => array( 'service_type' ),
     );
 
     $catParams = array(
@@ -454,7 +454,7 @@ function createServiceTaxonomy() {
         '_builtin'              => false,
         'show_in_quick_edit'    => null, // по умолчанию значение show_ui
     );
-    register_taxonomy('service', array('service'), $catParams);
+    register_taxonomy('service_type', array('service'), $catParams);
 
     register_post_type('service', $params);
 }

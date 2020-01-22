@@ -13,20 +13,18 @@
                                 <div class="thumbnail-image">
                                     <?php the_post_thumbnail('full', array('class' => 'thumbnail-image'));?>
                                 </div>
-                                <?php the_content(''); ?>
-                                <?php
-                                    $cabins = get_field('cabins');
-                                foreach ($cabins as $cabin): ?>
-                                    <div class="cabin">
+                                <div>
+                                    <?php the_content(''); ?>
+                                    <?php $cabins = get_field('cabins'); var_dump($cabin); foreach ($cabins as $cabin): ?>?>
+                                    <div class="home-complex-support-item">
                                         <div class="img-cabin-wrapper">
-                                            <img src="<?php echo $cabin['cabin']['cabin_img']; ?>" />
+                                            <img src="<?php echo $cabin['cabin_img'];?>" />
                                         </div>
-                                        <div class="desc-cabin-wrapper">
-                                            <strong><?php echo $cabin['cabin']['cabin_title']; ?></strong>
-                                            <?php echo $cabin['cabin']['cabin_desc']; ?>
-                                        </div>
+                                        <strong class="cat-name"><?php echo $cat['cabin_title']; ?></strong>
+                                        <p class="cat-desc"><?php echo $cat['cabin_title']; ?></p>
                                     </div>
-                                <?php endforeach; ?>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
                         </div>
                     <?php endwhile; ?>

@@ -1,5 +1,5 @@
     <footer>
-        <div class="ft_divider"></div>
+
         <div id="footer" class="footer">
             <div class="container">
                 <div class="row">
@@ -7,18 +7,14 @@
                         <a href="<?php echo site_url(); ?>">
                             <div class="ft_logo">
                                 <img
-                                    src="<?php bloginfo('template_url');?>/img/dsts.png"
+                                    src="<?php bloginfo('template_url');?>/img/logo.png"
                                     alt="<?php bloginfo('name');?>"
                                 />
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-6 col-xs-12 company-info">
-                        <?=get_field('ft_text', 'options'); ?>
-                    </div>
                     <div class="col-lg-2 col-md-6 col-xs-12 head-comments-link">
                         <a data-toggle="modal" data-target="#modalReview">
-                            <span class="icon icon-comments"></span>
                             <span class="comment-link-text">Оставить отзыв</span>
                         </a>
                     </div>
@@ -33,26 +29,6 @@
                             ); ?>
                         </nav>
                     </div>
-                    <div class="col-lg-2 col-md-6 col-xs-12">
-                        <?php include('templates/telephone.php'); ?>
-                        <a href="mailto:<?php echo get_field('email', 'options'); ?>" class="icon icon-mail"></a>
-                        <a href="tg://resolve?domain=<?php echo get_field('telegram', 'options'); ?>" class="icon icon-plain"></a>
-                        <a class="recall" data-toggle="modal" data-target="#modalOrder">Обратный звонок</a>
-                    </div>
-                    <!--<small>
-                        Icons made by
-                        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">
-                            Smashicons
-                        </a>
-                        from
-                        <a href="https://www.flaticon.com/" title="Flaticon">
-                            www.flaticon.com
-                        </a>
-                        is licensed by
-                        <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">
-                            CC 3.0 BY
-                        </a>
-                    </small>-->
                 </div>
             </div>
         </div>
