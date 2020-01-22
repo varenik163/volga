@@ -5,6 +5,9 @@ if (jQuery(window).width() > 1024) {
 }
 
 jQuery(document).ready(function () {
+	jQuery('#sidebar-btn').click(function() {
+		jQuery('#sidebar').toggle(200);
+	});
 	jQuery('.slidebotbox_close').click(function () {
 		jQuery(this).parent().hide(200);
 	});

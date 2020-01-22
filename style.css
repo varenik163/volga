@@ -216,6 +216,25 @@ b, strong {
     color: #0f0f0f!important;
 }
 
+.sidebar-wrapper {
+    position: fixed;
+    top: 205px;
+    right: 100px;
+    width: 415px;
+    background: #f7f5f5;
+    padding: 15px;
+    border-radius: 5px;
+}
+#sidebar-btn {
+    cursor: pointer;
+}
+#sidebar {
+    display: none;
+    overflow: auto;
+    max-height: 650px;
+    margin-top: 50px;
+}
+
 .top_bar_page {
     background: #f5f7f9;
 }
