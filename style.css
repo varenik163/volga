@@ -38,7 +38,7 @@ Author: Rysin Valeriy
 }
 
 .tour-order-button-row {
-    margin-top: 150px;
+    margin-top: 0px;
 }
 
 .flex {
@@ -198,7 +198,7 @@ b, strong {
 .glass {
     width: 100%;
     height: 100%;
-    background: #ffffff85;
+    /*background: #ffffff85;*/
 }
 
 .head_top {
@@ -206,7 +206,7 @@ b, strong {
     background-size: cover;
     background-position: center center;
     position: relative;
-    background: url(img/cruise-min.jpg);
+    background: url(img/cruise-min2.jpg);
     height: 875px;
     background-size: cover;
 }
@@ -231,7 +231,7 @@ b, strong {
 #sidebar {
     display: none;
     overflow: auto;
-    max-height: 650px;
+    max-height: 550px;
     margin-top: 50px;
 }
 
@@ -353,7 +353,7 @@ b, strong {
 }
 
 .tel {
-    /*font-family: Montserrat-SemiBold;*/
+    font-family: Montserrat-SemiBold;
     font-size: 18px;
 }
 
@@ -362,7 +362,7 @@ b, strong {
 }
 
 .tel-code {
-    color: #4cb4b4;
+    color: #053270;
 }
 
 .tel-number {
@@ -370,8 +370,8 @@ b, strong {
 }
 
 .recall {
-    background: #4cb4b4;
-    color: #fff;
+    background: #fdef88;
+    color: #948585;
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
@@ -384,7 +384,6 @@ b, strong {
 }
 
 .recall:hover {
-    color: #fff;
     opacity: .7;
 }
 
@@ -423,8 +422,19 @@ b, strong {
     margin: 0 20px 20px 0;
 }
 
+.cabins {
+    margin-top: 50px;
+}
+
+.cabin:last-child {
+    border-bottom: none;
+}
+
 .cabin {
     clear: both;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
 .about-items-item {
@@ -462,7 +472,7 @@ b, strong {
     font-size: 42px;
     font-weight: 600;
     margin-top: 88px;
-    margin-bottom: 48px;
+    margin-bottom: 5px;
     font-family: "Montserrat-SemiBold";
 }
 
