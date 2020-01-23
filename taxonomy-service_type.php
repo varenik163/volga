@@ -9,7 +9,7 @@
                 <?php if (have_posts()) : ?>
                     <div class="cat_posts">
                         <?php while (have_posts()) : the_post(); ?>
-                            <div class="col-lg-12 col-md-6 col-xs-12">
+                            <div class="col-lg-12 col-md-12 col-xs-12">
                                 <div class="post_thumb">
                                     <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('medium');?></a>
                                 </div>
