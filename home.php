@@ -18,7 +18,7 @@ get_header();
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 home-h2">
+            <div class="col-lg-12 centerated">
                 <h2>Речные круизы</h2>
             </div>
             <div class="col-lg-12">

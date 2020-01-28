@@ -16,7 +16,6 @@ foreach ($motorships as $motorship): ?>
                     <img src="<?php echo get_the_post_thumbnail_url($motorship->ID);?>" />
                 </div>
                 <strong class="cat-name"><?php echo $motorship->post_title; ?></strong>
-                <p class="cat-desc"><?php echo $motorship->description; ?></p>
             </div>
         </a>
     </div>

@@ -41,6 +41,11 @@ Author: Rysin Valeriy
     margin-top: 0px;
 }
 
+.motorships img {
+    width: 240px;
+    height: 164px;
+}
+
 .flex {
     display: flex;
     align-items: center;
@@ -206,7 +211,7 @@ b, strong {
     background-size: cover;
     background-position: center center;
     position: relative;
-    background: url(img/cruise-min2.jpg);
+    background: url(img/cruise-min2.jpg) center center fixed;
     height: 875px;
     background-size: cover;
 }
@@ -1175,8 +1180,9 @@ footer .head-comments-link {
 }
 
 .footer {
-    background: #f0f0f0;
+    background: #fff;
     padding: 40px 0;
+    border-top: 2px solid #053270;
 }
 
 .company-info {
