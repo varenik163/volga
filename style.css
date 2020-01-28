@@ -471,7 +471,13 @@ b, strong {
     display: inline-block;
 
 }
-
+.tour-order-button-row-header {
+    margin-top: 200px;
+}
+.services-header {
+    margin-top: 88px;
+    margin-bottom: 5px;
+}
 .site-name {
     color: #053270b5;
     font-size: 42px;

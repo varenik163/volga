@@ -43,13 +43,16 @@
                                     <div class="site-desc"><?php bloginfo('description');?></div>
 
                                 </div>
-                            </div>
-                            <div class="row tour-order-button-row">
-                                <div class="col-lg-12 flex">
-                                    <a class="tour-order-button flex opacity-hover" data-toggle="modal" data-target="#modalOrder">Заказать тур</a>
+                                <div class="col-lg-6 services-header">
+                                    <?php include('templates/services.php'); ?>
                                 </div>
-                        </div>
-                    </div>
+                            </div>
+                            <div class="row tour-order-button-row-header">
+                                <div class="col-lg-12 flex">
+                                    <a class="tour-order-button flex centerated opacity-hover" data-toggle="modal" data-target="#modalOrder">Подписаться на спецпредложения</a>
+                                </div>
+                            </div>
+                         </div>
                     </div>
                 </div>
             <?php else: ?>
