@@ -27,6 +27,12 @@
         <a href="mailto:<?=get_field('email_recall', 'options');?>" class="email-top"><?=get_field('email_recall', 'options');?></a>
     </div>
     <div class="col-lg-2 col-md-3 col-xs-12">
+        <div class="flex flex-column">
+            <div>Пишите нам:</div>
+            <?php dynamic_sidebar('social'); ?>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-3 col-xs-12">
         <a class="recall" data-toggle="modal" data-target="#modalOrder">Обратный звонок</a>
     </div>
 </div>

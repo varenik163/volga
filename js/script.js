@@ -12,7 +12,7 @@ jQuery(document).ready(function () {
 		jQuery(this).parent().hide(200);
 	});
 
-	jQuery(window).scroll(function () {
+	/*jQuery(window).scroll(function () {
 		if(jQuery(window).scrollTop() >= 20) jQuery('.top_bar').css({
 			'background': '#f5f7f9'
 		});
@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
 		if(jQuery(window).scrollTop() < 20) jQuery('.top_bar').css({
 			'background': 'transparent'
 		})
-	});
+	});*/
 
 	// Search
 	function onSearchClick() {
@@ -144,9 +144,12 @@ jQuery(document).ready(function () {
 	jQuery('.campaign-home-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 3500,
 		infinite: true,
-		prevArrow: '<button type="button" class="slick-prev"></button>',
-		nextArrow: '<button type="button" class="slick-next"></button>',
+        arrows: false,
+        pauseOnHover: false,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -472,7 +475,7 @@ jQuery(document).ready(function () {
 	});
 
 	if(window.innerWidth > 1200 && window.innerHeight > 875) jQuery('.service-custom-top').height(window.innerHeight);
-	if(window.innerWidth > 1400 && window.innerHeight > 875) jQuery('.head_top').height(window.innerHeight)
-
+	if(window.innerWidth > 1400 && window.innerHeight > 875) jQuery('.head_top').height(window.innerHeight - 170);
+    jQuery('#sidebar').css({ 'maxHeight': window.innerHeight - 250 });
 });
 

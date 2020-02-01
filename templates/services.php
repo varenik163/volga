@@ -19,7 +19,7 @@ foreach ($terms as $cat): ?>
         <a href="<?=get_term_link((int)$cat->term_id); ?>">
         <div class="home-complex-support-item">
             <div class="img-circle-wrapper">
-                <img src="<?php echo get_field('service_type_image', $cat);?>" />
+                <!--<img src="<?php echo get_field('service_type_image', $cat);?>" />-->
             </div>
                 <strong class="cat-name"><?php echo $cat->name; ?></strong>
             <!--<p class="cat-desc"><?php /*echo $cat->description; */?></p>-->

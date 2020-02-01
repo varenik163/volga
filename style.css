@@ -46,6 +46,10 @@ Author: Rysin Valeriy
     height: 164px;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 .flex {
     display: flex;
     align-items: center;
@@ -165,7 +169,7 @@ b, strong {
 }
 
 .head_content {
-    padding-top: 100px;
+    padding-top: 121px;
 }
 
 .top_line {
@@ -206,19 +210,53 @@ b, strong {
     /*background: #ffffff85;*/
 }
 
+.header-nav-wrapper {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e5ef;
+    background: #f5f7f9;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
 .head_top {
     clear: both;
     background-size: cover;
     background-position: center center;
     position: relative;
-    background: url(img/cruise-min2.jpg) center center fixed;
+    /*background: url(img/cruise-min2.jpg) center center fixed;*/
     height: 875px;
     background-size: cover;
+}
+
+.head_top .slick-track, #header_gallery, .head_top .slick-list { 
+    height: 100%; 
+    position: fixed;
+    width: 100%;
+    z-index: -1;
 }
 
 .email-top {
     text-decoration: none;
     color: #0f0f0f!important;
+}
+.header_gallery-item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.header_gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .sidebar-wrapper {
@@ -245,7 +283,8 @@ b, strong {
 }
 
 .top_bar {
-    /*border-bottom: 1px solid #e0e5ef;*/
+    border-bottom: 1px solid #e0e5ef;
+    background: #f5f7f9
 }
 
 .top_bar_inner {
@@ -405,14 +444,16 @@ b, strong {
 .navbar-nav {
     margin: 0 !important;
 }
+
 .nav > li > a, .nav > li >span {
     color: #000;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.4;
     font-family: "Montserrat-SemiBold";
     font-weight: 600;
     display: block;
     position: relative;
+    padding: 0 10px;
 }
 .nav>li>a, .nav>li>a {
     text-decoration: none;
@@ -482,7 +523,6 @@ b, strong {
     color: #053270b5;
     font-size: 42px;
     font-weight: 600;
-    margin-top: 88px;
     margin-bottom: 5px;
     font-family: "Montserrat-SemiBold";
 }
@@ -943,6 +983,7 @@ b, strong {
     outline: none;
     background-repeat: no-repeat;
 }
+.campaign-home-slider img { max-width: 100%; }
 .campaign-home-slider .slick-prev {
     display: none!important;
 }
@@ -1139,9 +1180,6 @@ b, strong {
     font-weight: normal !important;
 }
 
-.widget{
-    margin: 0 0 40px;
-}
 .widget_title{
     margin: 0 0 20px;
     font-size: 20px;

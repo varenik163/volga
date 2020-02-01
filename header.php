@@ -20,52 +20,35 @@
 <body <?php body_class(); ?>>
     <div class="">
         <header>
-
-            <?php if(is_front_page()): ?>
-                <div class="head_top" id="head_top_block">
-                    <div class="glass">
-                    <div class="top">
-                        <div class="top_bar">
-                            <div class="container">
-                                <div class="row">
-                                    <?php include('templates/topBar.php'); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="head_content">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="site-name">
-                                        <?=get_bloginfo('name')?>
-                                    </div>
-                                    <div class="site-desc"><?php bloginfo('description');?></div>
-
-                                </div>
-                                <div class="col-lg-6 services-header">
-                                    <?php include('templates/services.php'); ?>
-                                </div>
-                            </div>
-                            <div class="row tour-order-button-row-header">
-                                <div class="col-lg-12 flex">
-                                    <a class="tour-order-button flex centerated opacity-hover" data-toggle="modal" data-target="#modalOrder">Подписаться на спецпредложения</a>
-                                </div>
-                            </div>
-                         </div>
-                    </div>
-                </div>
-            <?php else: ?>
             <div class="top">
-                <div class="top_bar_page">
-                    <div class="container ">
+                <div class="top_bar">
+                    <div class="container">
                         <div class="row">
                             <?php include('templates/topBar.php'); ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php endif; ?>
-
-            </header>
+            <div class="head_content">
+                <div class="header-nav-wrapper">
+                    <?php wp_nav_menu(
+                        array(
+                            'theme_location' => 'top',
+                            'depth' => 4, 'container' => false,
+                            'menu_class' => 'nav navbar-nav header-nav'
+                        )
+                    ); ?>
+                </div>
+            </div>
+        </header>
+        <div class="head_top" id="head_top_block">
+            <div class="campaign-home-slider" id="header_gallery">
+                <?php if(is_front_page()): $imgs = get_field('heafer_gallery', 'options'); foreach ($imgs as $img):?>
+                    <div class="header_gallery-item">
+                        <img src="<?=$img['img']?>" />
+                    </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+        </div>
 
