@@ -31,10 +31,19 @@ Author: Rysin Valeriy
     border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
-    width: 395px;
     height: 85px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+}
+
+.tour-order-button-red {
+    font-size: 16px;
+    padding: 10px;
+    background: #b41953;
+    width: 100%;
+    margin-bottom: 0px;
 }
 
 .tour-order-button-row {
@@ -169,7 +178,7 @@ b, strong {
 }
 
 .head_content {
-    padding-top: 121px;
+    padding-top: 141px;
 }
 
 .top_line {
@@ -237,11 +246,20 @@ b, strong {
     background-size: cover;
 }
 
-.head_top .slick-track, #header_gallery, .head_top .slick-list { 
-    height: 100%; 
-    position: fixed;
-    width: 100%;
-    z-index: -1;
+.header_gallery_wrapper .slick-track, #header_gallery, .header_gallery_wrapper .slick-list {
+    height: 100%;
+}
+
+.header_gallery_wrapper {
+    height: 500px;
+}
+
+.header_gallery-left_item {
+    margin-bottom: 70px;
+}
+
+.header_gallery_wrapper .header_gallery-left_item:last-child {
+    margin-bottom: 0;
 }
 
 .email-top {
@@ -253,6 +271,7 @@ b, strong {
     width: 100%;
     position: relative;
 }
+
 .header_gallery-item img {
     width: 100%;
     height: 100%;
@@ -284,7 +303,8 @@ b, strong {
 
 .top_bar {
     border-bottom: 1px solid #e0e5ef;
-    background: #f5f7f9
+    background: #f5f7f9;
+    border-top: 20px solid #446290;
 }
 
 .top_bar_inner {
@@ -906,6 +926,31 @@ b, strong {
     bottom: 50%;
 }
 
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+}
+
+ul.slick-dots li {
+    background: none!important;
+    display: inline-block;
+}
+
+ul.slick-dots li button {
+    font-size: 0px;
+    background: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    outline: none;
+}
+
+ul.slick-dots li.slick-active button {
+    background: #990000;
+}
+
 .about-comments .slider-item a {
     display: block;
     text-decoration: none;
@@ -1291,7 +1336,6 @@ footer .comment-link-text {
 }
 
 .content {
-    padding-top: 200px;
     background: #ffffff;
     min-height: 900px;
 }
@@ -1326,7 +1370,6 @@ footer .comment-link-text {
 }
 .single_post .post_title h1{
     margin: 0 0 25px;
-    border-bottom: 2px solid #999;
     padding-bottom: 3px;
     font-size: 40px;
 }

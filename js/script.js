@@ -144,12 +144,12 @@ jQuery(document).ready(function () {
 	jQuery('.campaign-home-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-        dots: false,
+        dots: true,
         autoplay: true,
         autoplaySpeed: 3500,
 		infinite: true,
         arrows: false,
-        pauseOnHover: false,
+        pauseOnHover: true,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -193,7 +193,7 @@ jQuery(document).ready(function () {
 	// Order request from page
 	function AjaxFormPageRequest() {
 		jQuery.ajax({
-			url:    window.location.origin + '/wp-content/themes/dsts/helpers/sendOrderByEmail.php', //Адрес подгружаемой страницы
+			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendOrderByEmail.php', //Адрес подгружаемой страницы
 			type:     "POST", //Тип запроса
 			dataType: "html", //Тип данных
 			data: jQuery("#order_call_page").serialize(),
@@ -231,7 +231,7 @@ jQuery(document).ready(function () {
 	// Order request
 	function AjaxFormRequest() {
 		jQuery.ajax({
-			url:    window.location.origin + '/wp-content/themes/dsts/helpers/sendOrderByEmail.php', //Адрес подгружаемой страницы
+			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendOrderByEmail.php', //Адрес подгружаемой страницы
 			type:     "POST", //Тип запроса
 			dataType: "html", //Тип данных
 			data: jQuery("#order_call").serialize(),
@@ -274,7 +274,7 @@ jQuery(document).ready(function () {
 	// New review
 	function AjaxFormReview() {
 		jQuery.ajax({
-			url:    window.location.origin + '/wp-content/themes/dsts/helpers/sendNewReviewByEmail.php', //Адрес подгружаемой страницы
+			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendNewReviewByEmail.php', //Адрес подгружаемой страницы
 			type:     "POST", //Тип запроса
 			dataType: "html", //Тип данных
 			data: jQuery("#new_review").serialize(),
@@ -337,7 +337,7 @@ jQuery(document).ready(function () {
 		formData.append('email', jQuery("#resume_form_send_to").val());
 
 		jQuery.ajax({
-			url:    window.location.origin + '/wp-content/themes/dsts/helpers/sendNewResumeByEmail.php', //Адрес подгружаемой страницы
+			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendNewResumeByEmail.php', //Адрес подгружаемой страницы
 			type:     "post", //Тип запроса
 			// dataType: "text", //Тип данных
 			data: formData,
@@ -395,7 +395,7 @@ jQuery(document).ready(function () {
 	// liquid page help
 	function AjaxFormLiquidHelp() {
 		jQuery.ajax({
-			url:    window.location.origin + '/wp-content/themes/dsts/helpers/sendPhoneByEmail.php', //Адрес подгружаемой страницы
+			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendPhoneByEmail.php', //Адрес подгружаемой страницы
 			type:     "POST", //Тип запроса
 			dataType: "html", //Тип данных
 			data: jQuery("#order_call_page_help").serialize(),

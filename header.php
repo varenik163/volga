@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" xml:lang="ru">
+<script src="//code.jivosite.com/widget/7KfLV3Ribf" async></script>
 <head>
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
     <meta charset="utf-8" />
@@ -41,14 +42,4 @@
                 </div>
             </div>
         </header>
-        <div class="head_top" id="head_top_block">
-            <div class="campaign-home-slider" id="header_gallery">
-                <?php if(is_front_page()): $imgs = get_field('heafer_gallery', 'options'); foreach ($imgs as $img):?>
-                    <div class="header_gallery-item">
-                        <img src="<?=$img['img']?>" />
-                    </div>
-                <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
-        </div>
 

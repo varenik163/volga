@@ -33,7 +33,8 @@
         </div>
         <?php include('templates/modalOrder.php') ?>
         <?php include('templates/modalReview.php') ?>
-        <?php include('templates/modalResume.php') ?>
+        <?php include('templates/modalTour.php') ?>
+        <?php include('templates/modalSign.php') ?>
     </footer>
     <?php dynamic_sidebar('footer1');?>
     <?php wp_footer(); ?>
