@@ -6,6 +6,29 @@
                 <?php if (!is_home() || !is_front_page()) : ?>
                     <div class="breadcrumbs"><?php if(function_exists('bcn_display')) : bcn_display(); endif;?></div>
                 <?php endif;?>
+                <h1>
+                    <?php single_term_title(); ?>
+                </h1>
+                <section>
+                    <p>
+                        Друзья, наша компания рада предложить Вам автобусные туры из Самары:
+                    </p>
+                    <ul>
+                        <li>в Казань</li>
+                        <li>в Уфу</li>
+                        <li>в Ульяновск</li>
+                        <li>в Саранск</li>
+                        <li>в Екатеринбург</li>
+                    </ul>
+                    <p>
+                        А также экскурсии по г.Самаре и Самарской области.
+                        Будем рады сотрудничеству.
+                    </p>
+                    <p>
+                        Ждем Ваших заявок по тел. <a href="tel:8 (846) 248-28-65">8 (846) 248-28-65</a>,
+                        e-mail: <a href="mailto:info@volga-kruis.ru">info@volga-kruis.ru</a>
+                    </p>
+                </section>
                 <?php if (have_posts()) : ?>
                     <div class="cat_posts">
                         <?php while (have_posts()) : the_post(); ?>
@@ -24,9 +47,6 @@
                     </div>
                     <div class="clearfix"></div>
                     <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
-                <?php else : ?>
-                    Извините, но запрашиваемая Вами информация не найдена<br />
-                    Попробуйте перейти на <a href="<?php bloginfo('home'); ?>">главную страницу</a>
                 <?php endif; ?>
             </div>
             <?php get_sidebar(); ?>

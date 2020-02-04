@@ -35,6 +35,7 @@
         <?php include('templates/modalReview.php') ?>
         <?php include('templates/modalTour.php') ?>
         <?php include('templates/modalSign.php') ?>
+        <?php include('templates/modalCruise.php') ?>
     </footer>
     <?php dynamic_sidebar('footer1');?>
     <?php wp_footer(); ?>

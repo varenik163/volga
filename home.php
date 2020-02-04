@@ -34,6 +34,7 @@ get_header();
                         <?php if(is_front_page()): $imgs = get_field('heafer_gallery', 'options'); foreach ($imgs as $img):?>
                             <div class="header_gallery-item">
                                 <img src="<?=$img['img']?>" />
+                                <div></div>
                             </div>
                         <?php endforeach; ?>
                         <?php endif; ?>
@@ -47,7 +48,7 @@ get_header();
             </div>
             <div class="tour-order-button-row">
                 <div class="col-lg-12 flex">
-                    <a class="tour-order-button flex opacity-hover" data-toggle="modal" data-target="#modalTour">Оставить заявку на круиз</a>
+                    <a class="tour-order-button flex opacity-hover" data-toggle="modal" data-target="#modalCruise">Оставить заявку на круиз</a>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -69,7 +70,7 @@ get_header();
             <?php
             $fields = get_field('advantages', 'options');
             foreach ($fields as $field): ?>
-                <div class="col-lg-4">
+                <div class="col-lg-5ths col-sm-5ths col-md-5ths col-xs-5ths">
                     <div class="home-complex-support-item">
                         <div class="img-circle-wrapper">
                             <img src="<?php echo $field['advantages_img']; ?>" />

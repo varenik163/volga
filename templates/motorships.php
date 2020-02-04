@@ -9,7 +9,7 @@ $motorships = get_posts( array(
 ) );
 // var_dump($motorships);
 foreach ($motorships as $motorship): ?>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
         <a href="<?=get_permalink($motorship->ID); ?>">
             <div class="home-complex-support-item">
                 <div class="">
