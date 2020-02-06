@@ -476,6 +476,6 @@ jQuery(document).ready(function () {
 
 	if(window.innerWidth > 1200 && window.innerHeight > 875) jQuery('.service-custom-top').height(window.innerHeight);
 	if(window.innerWidth > 1400 && window.innerHeight > 875) jQuery('.head_top').height(window.innerHeight - 170);
-    jQuery('#sidebar').css({ 'maxHeight': window.innerHeight - 250 });
+    jQuery('#sidebar').css({ 'maxHeight': window.innerHeight - 350 });
 });
 

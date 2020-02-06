@@ -5,7 +5,7 @@
         <a href="<?php echo site_url(); ?>">
             <div class="logo_img">
                 <img
-                    src="<?php bloginfo('template_url');?>/img/logo.png"
+                    src="<?php bloginfo('template_url');?>/img/volga_dark.png"
                     alt="<?php bloginfo('name');?>"
                 />
             </div>
@@ -13,7 +13,7 @@
     </div>
     <div class="col-lg-4 col-md-6 col-xs-12">
         <nav id="site_main_menu" class="site_main_menu navbar-collapse">
-            <?php wp_nav_menu( 
+            <?php wp_nav_menu(
                 array(
                     'theme_location' => 'header',
                     'depth' => 4, 'container' => false,

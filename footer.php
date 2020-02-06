@@ -6,7 +6,7 @@
                         <a href="<?php echo site_url(); ?>">
                             <div class="ft_logo">
                                 <img
-                                    src="<?php bloginfo('template_url');?>/img/logo.png"
+                                    src="<?php bloginfo('template_url');?>/img/volga_dark.png"
                                     alt="<?php bloginfo('name');?>"
                                 />
                             </div>
