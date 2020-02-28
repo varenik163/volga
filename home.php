@@ -34,7 +34,7 @@ get_header();
                         <?php if(is_front_page()): $imgs = get_field('heafer_gallery', 'options'); foreach ($imgs as $img):?>
                             <div class="header_gallery-item">
                                 <img src="<?=$img['img']?>" />
-                                <div></div>
+                                <div class="header_gallery-img_desc"><?=$img['img_desc']?></div>
                             </div>
                         <?php endforeach; ?>
                         <?php endif; ?>
@@ -70,7 +70,7 @@ get_header();
             <?php
             $fields = get_field('advantages', 'options');
             foreach ($fields as $field): ?>
-                <div class="col-lg-5ths col-sm-5ths col-md-5ths col-xs-5ths">
+                <div class="col-lg-5ths col-sm-12 col-md-5ths col-xs-12">
                     <div class="home-complex-support-item">
                         <div class="img-circle-wrapper">
                             <img src="<?php echo $field['advantages_img']; ?>" />

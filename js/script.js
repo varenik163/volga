@@ -6,6 +6,7 @@ if (jQuery(window).width() > 1024) {
 
 jQuery(document).ready(function () {
 	jQuery('#sidebar-btn').click(function() {
+	    jQuery('.sidebar-wrapper').toggleClass('opened_sidebar', 300);
 		jQuery('#sidebar').toggle(200);
 	});
 	jQuery('.slidebotbox_close').click(function () {
@@ -227,6 +228,49 @@ jQuery(document).ready(function () {
 			return false;
 		}
 	}}
+	
+	function AjaxFormSignRequest() {
+		jQuery.ajax({
+			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendSignByEmail.php', //Адрес подгружаемой страницы
+			type:     "POST", //Тип запроса
+			dataType: "html", //Тип данных
+			data: jQuery("#sign_form").serialize(),
+			success: function(response) { //Если все нормально
+				console.log(response);
+				jQuery("#sign_form").hide();
+				jQuery(".thanks").show();
+				jQuery(".thanks").html(response);
+				setTimeout(function(){
+					jQuery("#modalSign").modal('hide');
+					jQuery(".thanks").hide();
+					jQuery("#sign_form").show();
+				}, 3000);
+			},
+			error: function(error) { //Если ошибка
+				jQuery(".thanks_page").html(error);
+			}
+		});
+	}
+
+	var btn = document.getElementById('sign_send');
+	if(btn){ btn.onclick = function sign_submit_form(value){
+		var phone = jQuery("#sign_phone");
+		var name = jQuery("#sign_name");
+		jQuery('#sign_form .error').removeClass('error');
+		if(! name.val() ) {
+			name.addClass('error').focus();
+			return false;
+		}
+		if(! phone.val() ) {
+			phone.addClass('error').focus();
+			return false;
+		}
+		else {
+			AjaxFormSignRequest();
+			return false;
+		}
+	}}
+	
 
 	// Order request
 	function AjaxFormRequest() {
@@ -318,79 +362,69 @@ jQuery(document).ready(function () {
 		}
 	}}
 
-	const toBase64 = file => new Promise((resolve, reject) => {
-		const reader = new FileReader();
-		reader.readAsDataURL(file);
-		reader.onload = () => resolve(reader.result);
-		reader.onerror = error => reject(error);
-	});
-	// new resume
-	async function AjaxFormResume() {
-		const file =  document.getElementById('resume_form_file').files[0];
-		const formData = new FormData();
-		const bFile = await toBase64(file);
-		// console.log(bFile)
+    // New tour
+    function AjaxFormTour() {
+        console.log(jQuery("#cruise_form").serialize())
+        jQuery.ajax({
+            url:    window.location.origin + '/wp-content/themes/volga/helpers/sendNewReviewByEmail.php', //Адрес подгружаемой страницы
+            type:     "POST", //Тип запроса
+            dataType: "html", //Тип данных
+            data: jQuery("#cruise_form").serialize(),
+            success: function(response) { //Если все нормально
+                console.log(response);
+                jQuery("#cruise_form").hide();
+                jQuery(".thanks").show(); 
+                jQuery(".thanks").html(response);
+                setTimeout(function(){
+                    jQuery("#modalCruise").modal('hide');
+                    jQuery(".thanks").hide();
+                    jQuery("#cruise_form").show();
+                }, 3000);
+            },
+            error: function(error) { //Если ошибка
+                jQuery(".thanks").html(error);
+            }
+        });
+    }
 
-		formData.append('resume_form_file', file);
-		formData.append('resume_form_name', jQuery("#resume_form_name").val());
-		formData.append('resume_form_text', jQuery("#resume_form_text").val());
-		formData.append('email', jQuery("#resume_form_send_to").val());
+    var btn = document.getElementById('send_tour_order');
+    var btn_send_cruise_order = document.getElementById('send_cruise_order');
+    function send_tour_order(value){
+        var person_name = jQuery("#cruise_form_name");
+        var review_text = jQuery("#cruise_form_text");
+        var phone = jQuery("#cruise_phone");
+        var mail = jQuery("#cruise_mail");
 
-		jQuery.ajax({
-			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendNewResumeByEmail.php', //Адрес подгружаемой страницы
-			type:     "post", //Тип запроса
-			// dataType: "text", //Тип данных
-			data: formData,
-			cache: false,
-			contentType: false,
-			processData: false,
-			success: function(response) { //Если все нормально
-				console.log(response);
-				jQuery("#resume_form").hide();
-				jQuery(".thanks").show();
-				jQuery(".thanks").html(response);
-				setTimeout(function(){
-					jQuery("#modalResume").modal('hide');
-					jQuery(".thanks").hide();
-					jQuery("#resume_form").show();
-				}, 3000);
-			},
-			error: function(error) { //Если ошибка
-				jQuery(".thanks").html(error);
-			}
-		});
-	}
+        jQuery('#new_review .error').removeClass('error');
 
-	var form = document.getElementById('resume_form');
-	if(form){ form.onsubmit = async function send_resume_form(ev){
-		ev.preventDefault();
-		var person_name = jQuery("#resume_form_name");
-		var text = jQuery("#resume_form_text");
-		const file =  document.getElementById('resume_form_file').files[0];
-		console.log(file)
+        if(!person_name.val() )
+        {
+            person_name.addClass('error').focus();
+            return false;
+        }
+        else if(!review_text.val() )
+        {
+            review_text.addClass('error').focus();
+            return false;
+        }
+        else if(! phone.val() )
+        {
+            phone.addClass('error').focus();
+            return false;
+        }
+        else if(!mail.val() )
+        {
+            mail.addClass('error').focus();
+            return false;
+        }
+        else {
+            AjaxFormTour();
+            return false;
+        }
+    }
+    if(btn) btn.onclick = send_tour_order;
+    if (btn_send_cruise_order) btn_send_cruise_order.onclick = send_tour_order;
 
-		jQuery('#resume_form .error').removeClass('error');
-
-		if(! person_name.val() )
-		{
-			person_name.addClass('error').focus();
-			return false;
-		}
-		else if (!text.val() )
-		{
-			text.addClass('error').focus();
-			return false;
-		}
-		else if ( file.size > 10485760 )
-		{
-			jQuery('#resume_form_file').addClass('error').focus();
-			return false;
-		}
-		else {
-			await AjaxFormResume();
-			return false;
-		}
-	}}
 
 	// liquid page help
 	function AjaxFormLiquidHelp() {
@@ -439,31 +473,6 @@ jQuery(document).ready(function () {
 		if( scrollTop + rectTop + 100 >= footerOffset) widjet.style.display = 'none';
 		else if(widjet.style.display !== 'flex') widjet.style.display = 'flex'
 	};
-
-	// complex support servicers menu
-
-	jQuery('.home-complex-support-item').click(function () {
-		var serviceFadeList = jQuery(this).find('.services-fade-list');
-		var list = serviceFadeList.find('ul').find('li');
-		var fadeListHeight = 300;
-        var elemRectB = window.innerHeight - this.getBoundingClientRect().bottom,
-            listTop   = elemRectB > fadeListHeight ? 0 : elemRectB - fadeListHeight;
-        console.log(elemRectB, listTop);
-
-		if(list.length < 2) {
-            window.location.href = jQuery(list[0]).find('a')[0].href;
-            return;
-		}
-
-		if(serviceFadeList.hasClass('services-fade-list-open')) {
-			serviceFadeList.toggleClass('services-fade-list-open');
-		}
-		else {
-			jQuery('.services-fade-list').removeClass('services-fade-list-open');
-			serviceFadeList.toggleClass('services-fade-list-open');
-			serviceFadeList.css({ 'top': listTop + 'px' })
-		}
-	});
 
 	//review preview
 

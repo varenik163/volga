@@ -22,7 +22,7 @@ Author: Rysin Valeriy
 .thumbnail-image {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .tour-order-button {
@@ -53,6 +53,15 @@ Author: Rysin Valeriy
 .motorships img {
     width: 240px;
     height: 164px;
+    border-radius: 6px;
+}
+
+.volga {
+    overflow: hidden;
+    width: 423px;
+    height: 300px;
+    float: right;
+    box-shadow: inset 0 0 46px 24px #fff;
 }
 
 .flex-column {
@@ -64,6 +73,14 @@ Author: Rysin Valeriy
     align-items: center;
     justify-content: center;
 }
+
+.flexslider ul { 
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px -1px #000;
+}
+
+.reviews-imgs .flexslider ol { bottom: -50px; }
+.post_body .flexslider ol { bottom: -40px; }
 
 .col-xs-5ths,
 .col-sm-5ths,
@@ -135,6 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat-SemiBold;
     color: #000;
     font-weight: 400;
+    margin: 55px 0;
 }
 h2 {
     font-size: 30px;
@@ -252,6 +270,7 @@ b, strong {
 
 .header_gallery_wrapper {
     height: 500px;
+    overflow: hidden;
 }
 
 .header_gallery-left_item {
@@ -260,6 +279,14 @@ b, strong {
 
 .header_gallery_wrapper .header_gallery-left_item:last-child {
     margin-bottom: 0;
+}
+
+.header_gallery-img_desc {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background: #ffffff99;
+    padding: 15px; 
 }
 
 .email-top {
@@ -280,13 +307,19 @@ b, strong {
 
 .sidebar-wrapper {
     position: fixed;
-    top: 205px;
+    top: 235px;
     right: 100px;
-    width: 415px;
-    background: #f7f5f5;
+    width: 77px;
+    background: #05346d;
     padding: 15px;
     border-radius: 5px;
+    color: #fff;
+    z-index: 99;
 }
+
+.sidebar-wrapper .widget_title, .sidebar-wrapper a { color: #fff; }
+
+.opened_sidebar { width: 415px; }
 #sidebar-btn {
     cursor: pointer;
 }
@@ -581,6 +614,13 @@ b, strong {
     color: #fff;
     opacity: .7;
 }
+
+.country-item-img { 
+    float: left;
+    margin-right: 20px;
+}
+
+.country-item { margin-bottom: 20px; }
 
 #reklama_header{
     color: rgb(128, 128, 128);
@@ -1539,7 +1579,7 @@ footer .comment-link-text {
 
 /*  NUMERIC*/
 .post_body ol{list-style:none;padding:0;margin:0 0 20px;counter-reset:item;}
-.post_body ol li{position: relative;padding-left:3rem;line-height: 20px;margin-bottom:10px;}
+.post_body ol li{position: relative;line-height: 20px;margin-bottom:10px;}
 .post_body ol ol li{padding-left:4.3rem;}
 .post_body ol ol ol li{padding-left:6rem;}
 .post_body ol ol ol ol li{padding-left:7rem;}
@@ -2509,6 +2549,8 @@ strong.cat-name { min-height: 50px; display: flex; align-items: center; justify-
 
 }
 @media (max-width:769px){
+    .header-nav { overflow: auto; justify-content: inherit; }
+    .sidebar-wrapper { display: none; }
     #about-reviews-anchor, #campaign-anchor, #about-vacancy-anchor { top: 0; position: relative; }
     .vacancy-item .recall-order {
         display: block;
@@ -2622,6 +2664,11 @@ strong.cat-name { min-height: 50px; display: flex; align-items: center; justify-
     .top_bar_inner .icon-mail, .top_bar_inner .icon-plain { margin: 10px; }
     .guarantees-item, .head-comments-link { margin-bottom: 30px; }
     .service-custom-top { height: 715px; }
+    h1, .single_post .post_title h1 { font-size: 30px; }
+    h2 { font-size: 27px; }
+    h3 { font-size: 24px; }
+    .post_body img { float: none; }
+    #site_main_menu li { margin: 30px 0; }
 }
 @media (max-width:500px){
     .head_top {height: 1230px;}

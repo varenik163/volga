@@ -28,6 +28,8 @@
                             ); ?>
                         </nav>
                     </div>
+                    Gregor Cresnar's icons
+                     Freepik
                 </div>
             </div>
         </div>
@@ -40,6 +42,7 @@
     <?php dynamic_sidebar('footer1');?>
     <?php wp_footer(); ?>
     <script src="<?php bloginfo('template_url'); ?>/js/slick.js"></script>
+     
     </body>
 </html>
 

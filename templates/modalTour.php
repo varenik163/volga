@@ -9,7 +9,7 @@
                 <h4 class="modal-title" id="myModalLabel">Оставить заявяку на тур</h4>
             </div>
             <div class="modal-body">
-                <form name="resume_form" id="resume_form" enctype="multipart/form-data" method="POST">
+                <form name="tour_form" id="tour_form" onsubmit="return send_tour_order(this)" method="POST">
                     <input class="form-control" type="text" name="resume_form_name" placeholder="*ФИО" id="resume_form_name">
                     <textarea
                         rows="8"
@@ -24,9 +24,10 @@
                     <input type="hidden" name="id_form" value="order_call" id="id_form"> 
                     <div class="send_btn">
                         <button
-                            name="send_resume"
-                            id="send_resume"
+                            name="send_tour_order"
+                            id="send_tour_order"
                             class="btn btn-primary"
+                            onclick="return send_tour_order(this)"
                             style="margin-top: 20px;"
                         >
                             Отправить

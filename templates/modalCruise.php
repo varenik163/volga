@@ -9,8 +9,8 @@
                 <h4 class="modal-title" id="myModalLabel">Оставить заявяку на круиз</h4>
             </div>
             <div class="modal-body">
-                <form name="resume_form" id="resume_form" enctype="multipart/form-data" method="POST">
-                    <input class="form-control" type="text" name="resume_form_name" placeholder="*ФИО" id="resume_form_name">
+                <form name="cruise_form" id="cruise_form" onsubmit="return send_tour_order(this)" method="POST">
+                    <input class="form-control" type="text" name="resume_form_name" placeholder="*ФИО" id="cruise_form_name">
                     <textarea
                         rows="8"
                         class="form-control"
@@ -21,16 +21,17 @@
 - период отдыха
 - бюджет
 - другие пожелания"
-                        id="resume_form_text"></textarea>
+                        id="cruise_form_text"></textarea>
                     <br/>
-                    <input class="form-control" type="text" name="phone" placeholder="*Ваш телефон" id="your_phone">
-                    <input class="form-control" type="email" name="mail" placeholder="*Ваш e-mail" id="your_mail">
-                    <input type="hidden" name="email" value="<?php the_field('vacancy_mail','options'); ?>" id="resume_form_send_to">
+                    <input class="form-control" type="text" name="phone" placeholder="*Ваш телефон" id="cruise_phone">
+                    <input class="form-control" type="email" name="mail" placeholder="*Ваш e-mail" id="cruise_mail">
+                    <input type="hidden" name="email" value="<?php the_field('email_recall','options'); ?>" id="cruise_form_send_to">
                     <input type="hidden" name="id_form" value="order_call" id="id_form"> 
                     <div class="send_btn">
                         <button
-                            name="send_resume"
-                            id="send_resume"
+                            name="send_cruise_order"
+                            id="send_cruise_order"
+                            onclick="return send_tour_order(this)"
                             class="btn btn-primary"
                             style="margin-top: 20px;"
                         >
