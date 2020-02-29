@@ -228,8 +228,9 @@ jQuery(document).ready(function () {
 			return false;
 		}
 	}}
-	
+
 	function AjaxFormSignRequest() {
+		console.log(jQuery("#sign_form").serialize())
 		jQuery.ajax({
 			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendSignByEmail.php', //Адрес подгружаемой страницы
 			type:     "POST", //Тип запроса
@@ -270,7 +271,7 @@ jQuery(document).ready(function () {
 			return false;
 		}
 	}}
-	
+
 
 	// Order request
 	function AjaxFormRequest() {
@@ -364,21 +365,21 @@ jQuery(document).ready(function () {
 
     // New tour
     function AjaxFormTour() {
-        console.log(jQuery("#cruise_form").serialize())
+        console.log(jQuery("#tour_form").serialize())
         jQuery.ajax({
-            url:    window.location.origin + '/wp-content/themes/volga/helpers/sendNewReviewByEmail.php', //Адрес подгружаемой страницы
+            url:    window.location.origin + '/wp-content/themes/volga/helpers/sendTourByEmail.php', //Адрес подгружаемой страницы
             type:     "POST", //Тип запроса
             dataType: "html", //Тип данных
-            data: jQuery("#cruise_form").serialize(),
+            data: jQuery("#tour_form").serialize(),
             success: function(response) { //Если все нормально
                 console.log(response);
-                jQuery("#cruise_form").hide();
-                jQuery(".thanks").show(); 
+                jQuery("#tour_form").hide();
+                jQuery(".thanks").show();
                 jQuery(".thanks").html(response);
                 setTimeout(function(){
                     jQuery("#modalCruise").modal('hide');
                     jQuery(".thanks").hide();
-                    jQuery("#cruise_form").show();
+                    jQuery("#tour_form").show();
                 }, 3000);
             },
             error: function(error) { //Если ошибка
@@ -387,24 +388,42 @@ jQuery(document).ready(function () {
         });
     }
 
+	function AjaxFormCruise() {
+		console.log(jQuery("#cruise_form").serialize())
+		jQuery.ajax({
+			url:    window.location.origin + '/wp-content/themes/volga/helpers/sendCruiseByEmail.php', //Адрес подгружаемой страницы
+			type:     "POST", //Тип запроса
+			dataType: "html", //Тип данных
+			data: jQuery("#cruise_form").serialize(),
+			success: function(response) { //Если все нормально
+				console.log(response);
+				jQuery("#cruise_form").hide();
+				jQuery(".thanks").show();
+				jQuery(".thanks").html(response);
+				setTimeout(function(){
+					jQuery("#modalCruise").modal('hide');
+					jQuery(".thanks").hide();
+					jQuery("#cruise_form").show();
+				}, 3000);
+			},
+			error: function(error) { //Если ошибка
+				jQuery(".thanks").html(error);
+			}
+		});
+	}
+
     var btn = document.getElementById('send_tour_order');
     var btn_send_cruise_order = document.getElementById('send_cruise_order');
-    function send_tour_order(value){
-        var person_name = jQuery("#cruise_form_name");
-        var review_text = jQuery("#cruise_form_text");
-        var phone = jQuery("#cruise_phone");
-        var mail = jQuery("#cruise_mail");
+    function send_tour_order(){
+        var person_name = jQuery("#tour_form_name");
+        var phone = jQuery("#tour_phone");
+        var mail = jQuery("#tour_mail");
 
-        jQuery('#new_review .error').removeClass('error');
+        jQuery('#tour_form .error').removeClass('error');
 
         if(!person_name.val() )
         {
             person_name.addClass('error').focus();
-            return false;
-        }
-        else if(!review_text.val() )
-        {
-            review_text.addClass('error').focus();
             return false;
         }
         else if(! phone.val() )
@@ -418,12 +437,40 @@ jQuery(document).ready(function () {
             return false;
         }
         else {
-            AjaxFormTour();
+        	AjaxFormTour();
             return false;
         }
     }
+	function send_cruise_order(){
+    	console.log(123)
+		var person_name = jQuery("#cruise_form_name");
+		var phone = jQuery("#cruise_phone");
+		var mail = jQuery("#cruise_mail");
+
+		jQuery('#cruise_form .error').removeClass('error');
+
+		if(!person_name.val() )
+		{
+			person_name.addClass('error').focus();
+			return false;
+		}
+		else if(! phone.val() )
+		{
+			phone.addClass('error').focus();
+			return false;
+		}
+		else if(!mail.val() )
+		{
+			mail.addClass('error').focus();
+			return false;
+		}
+		else {
+			AjaxFormCruise();
+			return false;
+		}
+	}
     if(btn) btn.onclick = send_tour_order;
-    if (btn_send_cruise_order) btn_send_cruise_order.onclick = send_tour_order;
+    if (btn_send_cruise_order) btn_send_cruise_order.onclick = send_cruise_order;
 
 
 	// liquid page help

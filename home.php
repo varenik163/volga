@@ -54,7 +54,6 @@ get_header();
             <div class="col-lg-12">
                 <div class="col-lg-12 col-md-12 col-xs-12">
                     <script type="text/javascript" id="Riverlines" src="https://static.riverlines.ru/js/general.remote.js"></script>
-                    <?php include('templates/riverlineExample.php'); ?>
                 </div>
             </div>
         </div>

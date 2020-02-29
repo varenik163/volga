@@ -10,18 +10,18 @@
             </div>
             <div class="modal-body">
                 <form name="tour_form" id="tour_form" onsubmit="return send_tour_order(this)" method="POST">
-                    <input class="form-control" type="text" name="resume_form_name" placeholder="*ФИО" id="resume_form_name">
-                    <textarea
-                        rows="8"
-                        class="form-control"
-                        name="resume_form_text"
-                        placeholder="*Укажите тур, страну, курорт или отель, количетсво человек, бюджет, другие пожелания"
-                        id="resume_form_text"></textarea>
+                    <input class="form-control" type="text" name="tour_form_name" placeholder="*ФИО" id="tour_form_name"><input class="form-control" type="text" name="resume_form_city" placeholder="*Город" id="cruise_form_city">
+                    <input class="form-control" type="text" name="tour_form_tour" placeholder="*Укажите тур" id="tour_form_tour">
+                    <input class="form-control" type="text" name="tour_form_country" placeholder="*Укажите страну" id="tour_form_country">
+                    <input class="form-control" type="text" name="tour_form_peopleCount" placeholder="*количество человек" id="tour_form_peopleCount">
+                    <input class="form-control" type="text" name="tour_form_period" placeholder="*период отдыха" id="tour_form_period">
+                    <input class="form-control" type="text" name="tour_form_sum" placeholder="*бюджет" id="cruise_form_sum">
+                    <input class="form-control" type="text" name="tour_form_other" placeholder="другие пожелания" id="tour_form_other">
                     <br/>
-                    <input class="form-control" type="text" name="phone" placeholder="*Ваш телефон" id="your_phone">
-                    <input class="form-control" type="email" name="mail" placeholder="*Ваш e-mail" id="your_mail">
-                    <input type="hidden" name="email" value="<?php the_field('vacancy_mail','options'); ?>" id="resume_form_send_to">
-                    <input type="hidden" name="id_form" value="order_call" id="id_form"> 
+                    <input class="form-control" type="text" name="phone" placeholder="*Ваш телефон" id="tour_phone">
+                    <input class="form-control" type="email" name="mail" placeholder="*Ваш e-mail" id="tour_mail">
+                    <input type="hidden" name="email" value="<?php the_field('email_recall','options'); ?>" id="resume_form_send_to">
+                    <input type="hidden" name="id_form" value="order_call" id="id_form">
                     <div class="send_btn">
                         <button
                             name="send_tour_order"
