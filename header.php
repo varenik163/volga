@@ -15,8 +15,8 @@
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
-
-  <script charset="utf-8" async src="https://realpush.media/pushJs/1JHcfDQt.js"></script>
+    <script charset="utf-8" async src="https://realpush.media/pushJs/1JHcfDQt.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 <body <?php body_class(); ?>>
     <div class="">

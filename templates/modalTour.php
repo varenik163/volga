@@ -11,9 +11,9 @@
             <div class="modal-body">
                 <form name="tour_form" id="tour_form" onsubmit="return send_tour_order(this)" method="POST">
                     <input class="form-control" type="text" name="tour_form_name" placeholder="*ФИО" id="tour_form_name"><input class="form-control" type="text" name="resume_form_city" placeholder="*Город" id="cruise_form_city">
-                    <input class="form-control" type="text" name="tour_form_tour" placeholder="*Укажите тур" id="tour_form_tour">
                     <input class="form-control" type="text" name="tour_form_country" placeholder="*Укажите страну" id="tour_form_country">
                     <input class="form-control" type="text" name="tour_form_peopleCount" placeholder="*количество человек" id="tour_form_peopleCount">
+                    <input class="form-control" type="text" name="tour_form_meal" placeholder="*питание" id="tour_form_meal">
                     <input class="form-control" type="text" name="tour_form_period" placeholder="*период отдыха" id="tour_form_period">
                     <input class="form-control" type="text" name="tour_form_sum" placeholder="*бюджет" id="cruise_form_sum">
                     <input class="form-control" type="text" name="tour_form_other" placeholder="другие пожелания" id="tour_form_other">

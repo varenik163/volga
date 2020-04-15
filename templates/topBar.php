@@ -5,7 +5,7 @@
         <a href="<?php echo site_url(); ?>">
             <div class="logo_img">
                 <img
-                    src="<?php bloginfo('template_url');?>/img/volga_dark.png"
+                    src="<?php bloginfo('template_url');?>/img/logo.png"
                     alt="<?php bloginfo('name');?>"
                 />
             </div>

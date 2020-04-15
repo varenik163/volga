@@ -74,7 +74,7 @@ Author: Rysin Valeriy
     justify-content: center;
 }
 
-.flexslider ul { 
+.flexslider ul {
     border-radius: 5px;
     box-shadow: 2px 3px 5px -1px #000;
 }
@@ -286,7 +286,7 @@ b, strong {
     top: 25px;
     right: 0;
     background: #ffffff99;
-    padding: 15px; 
+    padding: 15px;
 }
 
 .email-top {
@@ -347,7 +347,7 @@ b, strong {
     height: 120px;
 }
 
-.logo_img img { width: 100px }
+.logo_img img { width: 135px }
 
 #searchform {
     display: block;
@@ -519,6 +519,11 @@ b, strong {
 .img-cabin-wrapper {
     float: left;
     margin: 0 20px 20px 0;
+    width: 300px;
+}
+
+.img-cabin-wrapper img {
+    width: 100%;
 }
 
 .cabins {
@@ -615,7 +620,7 @@ b, strong {
     opacity: .7;
 }
 
-.country-item-img { 
+.country-item-img {
     float: left;
     margin-right: 20px;
 }

@@ -17,6 +17,7 @@
                                 <div class="cabins">
                                     <?php
                                     $cabins = get_field('cabins');
+                                    if($cabins) :  
                                     foreach ($cabins as $cabin): ?>
                                         <div class="cabin">
                                             <div class="img-cabin-wrapper">
@@ -27,7 +28,7 @@
                                                 <?php echo $cabin['cabin']['cabin_desc']; ?>
                                             </div>
                                         </div>
-                                    <?php endforeach; ?>
+                                    <?php endforeach; endif; ?>
                                 </div>
                             </div>
                         </div>
