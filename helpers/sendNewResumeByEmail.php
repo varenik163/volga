@@ -8,13 +8,13 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 
     $boundary = "---";
     $base64encoded = 'base64 encoded mail';
-    $from = "admin@dsts.biz";
+    $from = "admin@volga.biz";
     $filename= "resume.jpg";
 
     /**
      * Headers
      */
-    $headers = 'From: ' . 'DSTS.BIZ' . '<' . 'admin@dsts.biz' . '>' . "\r\n";
+    $headers = 'From: ' . 'volga.BIZ' . '<' . 'admin@volga.biz' . '>' . "\r\n";
     $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"";
     $body = "--$boundary\n";
 

@@ -9,13 +9,13 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
         .'<p>другие пожелания: ' .  $_POST["tour_form_other"] . '</p>'
         .'<p>Email: ' .  $_POST["mail"] . '</p>'
         .'<p>Телефон: ' .  $_POST["phone"] . '</p>';
-    $to = $_POST["email"]; //'Ma3oBblu@gmail.com';
+    $to = $_POST["email"];
     $subject = 'Новая заявка';
     $subject = "=?utf-8?b?". base64_encode($subject) ."?=";
     // Для отправки HTML-письма должен быть установлен заголовок Content-type
     $headers = "Content-type: text/html; charset=\"utf-8\"\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= 'From: ' . 'no-reply' . '<' . 'admin@dsts.biz' . '>' . "\r\n";
+    $headers .= 'From: ' . 'no-reply' . '<' . 'admin@volga.biz' . '>' . "\r\n";
     if (mail($to, $subject, $message, $headers))
     {echo 'Спасибо, уважаемый Клиент!';}
     else
